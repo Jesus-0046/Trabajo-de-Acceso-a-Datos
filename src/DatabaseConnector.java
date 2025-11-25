@@ -5,10 +5,10 @@ import java.sql.SQLException;
 public class DatabaseConnector {
     
     public static Connection conectar() throws SQLException {
-        // Configuración para PHPMyAdmin (MySQL)
+        // Configuración 
         String url = "jdbc:mysql://localhost:3306/contratos_db";
-        String user = "root";  // Usuario por defecto de XAMPP
-        String password = "54321ROOT";  // Contraseña por defecto de XAMPP (vacía)
+        String user = "root";  
+        String password = "54321ROOT";  
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");

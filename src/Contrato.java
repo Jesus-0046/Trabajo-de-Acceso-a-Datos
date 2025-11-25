@@ -11,10 +11,10 @@ public class Contrato {
     private String proveedoresConsultados;
     private String tipoContrato;
     
-    // Constructor
+
     public Contrato() {}
     
-    // Getters y Setters
+    
     public String getNif() { return nif; }
     public void setNif(String nif) { this.nif = nif; }
     

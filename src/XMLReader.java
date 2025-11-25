@@ -55,7 +55,7 @@ public class XMLReader {
                             break;
                         case "fechaadjudicacion":
                             try {
-                                // El formato es: 2016-01-02T00:00:00.000
+                                // El formato es como: 2016-01-02T00:00:00.000
                                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS");
                                 contrato.setFechaAdjudicacion(dateFormat.parse(value));
                             } catch (Exception e) {
@@ -64,7 +64,7 @@ public class XMLReader {
                             break;
                         case "importe":
                             try {
-                                // DE ESTO 110,50 € A 110.50
+                                // PASA POR LA SIGUIENTE CONVERSIÓN: 110,50 € A 110.50
                                 String cleanValue = value.replace("€", "")
                                                        .replace(".", "")
                                                        .replace(",", ".")

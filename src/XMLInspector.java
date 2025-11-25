@@ -23,7 +23,7 @@ public class XMLInspector {
                     elementosUnicos.add(qName);
                     totalElementos++;
                     
-                    // Mostrar los primeros elementos para entender la estructura
+                    // Mostrar los primeros
                     if (totalElementos < 50) {
                         System.out.println("Elemento: " + qName);
                         for (int i = 0; i < attributes.getLength(); i++) {

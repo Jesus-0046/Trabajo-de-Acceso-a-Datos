@@ -52,7 +52,7 @@ public class XMLWriter {
             writer.close();
         }
         
-        System.out.println("✅ XML generado sin campo 'tipoContrato': " + outputFile);
+        System.out.println("XML generado sin campo 'tipoContrato': " + outputFile);
     }
     
     private static void escribirElemento(XMLStreamWriter writer, String elementName, String value) throws Exception {

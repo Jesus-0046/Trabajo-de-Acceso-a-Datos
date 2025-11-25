@@ -6,7 +6,7 @@ import java.util.List;
 public class DatabaseService {
     
     public static void guardarContratos(Connection conn, List<Contrato> contratos) throws SQLException {
-        // Primero, eliminar la tabla si existe y crearla nueva
+        
         String dropTableSQL = "DROP TABLE IF EXISTS contratos";
         try (PreparedStatement stmt = conn.prepareStatement(dropTableSQL)) {
             stmt.execute();
@@ -15,7 +15,7 @@ public class DatabaseService {
             System.out.println("ℹ️ No había tabla existente o no se pudo eliminar");
         }
         
-        // Crear tabla con la estructura correcta
+       
         String createTableSQL = "CREATE TABLE contratos (" +
                 "id INT AUTO_INCREMENT PRIMARY KEY, " +
                 "nif VARCHAR(20), " +
@@ -65,13 +65,13 @@ public class DatabaseService {
                 stmt.executeUpdate();
                 totalInsertados++;
                 
-                // Mostrar progreso cada 10 contratos
+                // Mostrar progresos
                 if (totalInsertados % 10 == 0) {
                     System.out.println("📦 " + totalInsertados + " contratos insertados...");
                 }
             }
             
-            System.out.println("✅ Total contratos insertados en BD: " + totalInsertados);
+            System.out.println("Total contratos insertados en BD: " + totalInsertados);
         }
     }
 }
